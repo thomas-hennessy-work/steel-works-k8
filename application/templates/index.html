@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block body_content %}
+
+<br>
+<br>
+
+{% for song in allSongs %}
+{{ song.title }} - {{ song.group }}
+	<br>
+	<form action='{{ url_for('viewSong', songID=song.song_id) }}'>
+                <button>View information</button>
+        </form>
+{% endfor %}
+
+{% endblock body_content %}
