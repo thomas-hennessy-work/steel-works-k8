@@ -66,5 +66,8 @@ spec:
       containers:
       - name: steelworks
         image: thomashennessy/steel-works
+        env:
+          - name: SECRET_KEY
+            value: {{secret-key}}
         ports:
         - containerPort: 5000
