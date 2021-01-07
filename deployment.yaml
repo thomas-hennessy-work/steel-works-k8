@@ -35,6 +35,8 @@ spec:
         env:
         - name: MYSQL_ROOT_PASSWORD
           value: {{password}}
+        - name: SQLALCHEMY_DATABASE_URI
+          value: {{db_uri}}
         ports:
         - containerPort: 3306
           name: mysql
